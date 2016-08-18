@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new ViewUpdater("", adi), 262000);
         handler.postDelayed(new ViewUpdater("", adib), 262000);
         handler.postDelayed(new ViewUpdater("Makasih udah nonton", adi), 262000);
-        handler.postDelayed(new ViewUpdater("", adib), 266000);
+        handler.postDelayed(new ViewUpdater("", adi), 266000);
 
         //random gambar
 
