@@ -4,8 +4,6 @@ import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ImageView gmb;
-    TextView textView, adi, adib;
+    TextView textView, adi, afr, adib;
     Handler handler = new Handler();
 
     @Override
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         adi = (TextView)findViewById(R.id.adi);
         adib = (TextView)findViewById(R.id.adibwh);
         gmb = (ImageView)findViewById(R.id.gmb);
-
+        afr = (TextView)findViewById(R.id.afr);
         //random lirik / teks
         handler.postDelayed(new ViewUpdater("Hei", textView), 9500);
         handler.postDelayed(new ViewUpdater(" apa kabarmu jauh di sana", textView), 11000);
@@ -92,12 +90,15 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new ViewUpdater("", textView), 241000);
         handler.postDelayed(new ViewUpdater("itu saja", textView), 242500);
         handler.postDelayed(new ViewUpdater("aaaa", textView), 245000);
+        handler.postDelayed(new ViewUpdater("", textView), 254000);
         handler.postDelayed(new ViewUpdater("Thanks to Adi Candra", adi), 255000);
         handler.postDelayed(new ViewUpdater("untuk fotonya, hahaha", adib), 258000);
         handler.postDelayed(new ViewUpdater("", adi), 262000);
         handler.postDelayed(new ViewUpdater("", adib), 262000);
         handler.postDelayed(new ViewUpdater("Makasih udah nonton", adi), 262000);
         handler.postDelayed(new ViewUpdater("", adi), 266000);
+
+        handler.postDelayed(new ViewUpdater("@afrijaldz",afr ), 1000);
 
         //random gambar
 
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {gmb.setImageResource(R.drawable.b);}}, 95000);
 
-       handler.postDelayed(new Runnable() {
+        handler.postDelayed(new Runnable() {
 
             @Override
             public void run() {gmb.setImageResource(R.drawable.c);}}, 189000);
