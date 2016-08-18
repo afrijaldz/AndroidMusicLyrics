@@ -7,7 +7,6 @@
     android:background="#e3f2fd">
     <ImageView
         android:id="@+id/gmb"
-        android:src="@drawable/afsd"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <TextView
@@ -20,4 +19,18 @@
         android:layout_marginBottom="82dp"
         android:textSize="20sp"
         android:textColor="#ffffff" />
+    <TextView
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:id="@+id/adi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/adibwh"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/adi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

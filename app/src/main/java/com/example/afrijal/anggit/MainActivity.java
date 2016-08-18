@@ -10,9 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+
 public class MainActivity extends AppCompatActivity {
     ImageView gmb;
-    TextView textView;
+    TextView textView, adi, adib;
     Handler handler = new Handler();
 
     @Override
@@ -21,10 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = (TextView) findViewById(R.id.text);
+        adi = (TextView)findViewById(R.id.adi);
+        adib = (TextView)findViewById(R.id.adibwh);
         gmb = (ImageView)findViewById(R.id.gmb);
 
-        handler.postDelayed(new ViewUpdater("Hei", textView), 10000);
-        handler.postDelayed(new ViewUpdater(" apa kabarmu jauh di sana", textView), 11500);
+        //random lirik / teks
+        handler.postDelayed(new ViewUpdater("Hei", textView), 9500);
+        handler.postDelayed(new ViewUpdater(" apa kabarmu jauh di sana", textView), 11000);
         handler.postDelayed(new ViewUpdater("tiba-tiba teringat", textView), 17000);
         handler.postDelayed(new ViewUpdater("cerita yang pernah", textView), 21500);
         handler.postDelayed(new ViewUpdater("kita upayakan", textView), 23500);
@@ -36,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new ViewUpdater("jalan kita tak bertemu", textView), 44000);
         handler.postDelayed(new ViewUpdater("Tapi tetap indah bagiku", textView), 48000);
         handler.postDelayed(new ViewUpdater("Semoga juga bagimu", textView), 53000);
-
         handler.postDelayed(new ViewUpdater("Kau tahu aku", textView), 58000);
         handler.postDelayed(new ViewUpdater("merelakanmu", textView), 61000);
         handler.postDelayed(new ViewUpdater("Aku cuma rindu,", textView), 65500);
@@ -89,26 +92,44 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new ViewUpdater("", textView), 241000);
         handler.postDelayed(new ViewUpdater("itu saja", textView), 242500);
         handler.postDelayed(new ViewUpdater("aaaa", textView), 245000);
-        /*
-        handler.postDelayed(new ViewUpdater("", textView), );
-        */
+        handler.postDelayed(new ViewUpdater("Thanks to Adi Candra", adi), 255000);
+        handler.postDelayed(new ViewUpdater("untuk fotonya, hahaha", textView), 258000);
+        handler.postDelayed(new ViewUpdater("", adi), 262000);
+        handler.postDelayed(new ViewUpdater("", textView), 262000);
+
+        //random gambar
 
 
-        /*
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {gmb.setImageResource(R.drawable.afsd);}}, 5000);
+
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {gmb.setImageResource(R.drawable.b);}}, 95000);
+
+       handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {gmb.setImageResource(R.drawable.c);}}, 189000);
 
 
+        handler.postDelayed(new Runnable() {
 
-
-
-
-        A, itu saja, itu saja, itu saja*/
-
+            @Override
+            public void run() {gmb.setImageResource(R.drawable.wpap);}}, 262000);
         mus();
 
     }
     private void mus(){
-        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.gagal);
+        final MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.gagal);
         mediaPlayer.start();
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {mediaPlayer.stop();}}, 255000);
     }
 
     private class ViewUpdater implements Runnable{
