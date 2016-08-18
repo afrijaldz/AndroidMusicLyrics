@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/adibwh"
-        
+
         android:layout_centerHorizontal="true"
         android:layout_below="@id/adi"
         android:layout_width="wrap_content"

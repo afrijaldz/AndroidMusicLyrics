@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new ViewUpdater("untuk fotonya, hahaha", adib), 258000);
         handler.postDelayed(new ViewUpdater("", adi), 262000);
         handler.postDelayed(new ViewUpdater("", adib), 262000);
-        handler.postDelayed(new ViewUpdater("Makasih udah nonton", adib), 262000);
+        handler.postDelayed(new ViewUpdater("Makasih udah nonton", adi), 262000);
         handler.postDelayed(new ViewUpdater("", adib), 266000);
 
         //random gambar
@@ -116,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {gmb.setImageResource(R.drawable.c);}}, 189000);
+
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {gmb.setImageDrawable(null);}}, 254000);
 
 
         handler.postDelayed(new Runnable() {
