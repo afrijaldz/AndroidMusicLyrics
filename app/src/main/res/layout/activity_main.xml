@@ -23,12 +23,14 @@
         android:textColor="#000000"
         android:textSize="25sp"
         android:id="@+id/adi"
+        android:text="vvvvv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/adibwh"
+        android:text="aaaaa"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/adi"
         android:layout_width="wrap_content"

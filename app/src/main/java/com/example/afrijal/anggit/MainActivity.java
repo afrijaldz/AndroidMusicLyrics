@@ -93,9 +93,11 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new ViewUpdater("itu saja", textView), 242500);
         handler.postDelayed(new ViewUpdater("aaaa", textView), 245000);
         handler.postDelayed(new ViewUpdater("Thanks to Adi Candra", adi), 255000);
-        handler.postDelayed(new ViewUpdater("untuk fotonya, hahaha", textView), 258000);
+        handler.postDelayed(new ViewUpdater("untuk fotonya, hahaha", adib), 258000);
         handler.postDelayed(new ViewUpdater("", adi), 262000);
-        handler.postDelayed(new ViewUpdater("", textView), 262000);
+        handler.postDelayed(new ViewUpdater("", adib), 262000);
+        handler.postDelayed(new ViewUpdater("Makasih udah nonton", adib), 262000);
+        handler.postDelayed(new ViewUpdater("", adib), 266000);
 
         //random gambar
 
@@ -119,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
 
             @Override
-            public void run() {gmb.setImageResource(R.drawable.wpap);}}, 262000);
+            public void run() {gmb.setImageResource(R.drawable.wpap);}}, 266000);
         mus();
 
     }
